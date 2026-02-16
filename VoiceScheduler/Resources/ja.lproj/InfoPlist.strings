@@ -1,0 +1,8 @@
+/* マイク権限 */
+"NSMicrophoneUsageDescription" = "音声で予定を登録するためにマイクへのアクセスが必要です。";
+
+/* 音声認識権限 */
+"NSSpeechRecognitionUsageDescription" = "音声をテキストに変換してスケジュールを抽出します。";
+
+/* カレンダー権限 */
+"NSCalendarsUsageDescription" = "予定をカレンダーに登録するためにアクセスが必要です。";

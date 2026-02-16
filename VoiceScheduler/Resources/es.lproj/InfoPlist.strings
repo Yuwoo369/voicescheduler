@@ -1,0 +1,8 @@
+/* Permiso de Micrófono */
+"NSMicrophoneUsageDescription" = "Se requiere acceso al micrófono para registrar eventos por voz.";
+
+/* Permiso de Reconocimiento de Voz */
+"NSSpeechRecognitionUsageDescription" = "El reconocimiento de voz convierte tu voz en entradas de agenda.";
+
+/* Permiso de Calendario */
+"NSCalendarsUsageDescription" = "Se requiere acceso al calendario para añadir tus eventos.";

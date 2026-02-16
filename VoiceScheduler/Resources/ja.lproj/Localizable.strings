@@ -1,0 +1,183 @@
+/*
+  Localizable.strings (Japanese)
+  VoiceScheduler
+*/
+
+// MARK: - Common
+"app_name" = "Voice Scheduler";
+"app_tagline" = "話すとAIが優先度を分析して\n自動でスケジュール作成";
+"cancel" = "キャンセル";
+"confirm" = "確認";
+"delete" = "削除";
+"save" = "保存";
+"close" = "閉じる";
+
+// MARK: - Login
+"login_google" = "Googleアカウントで続ける";
+"login_permission_notice" = "Googleカレンダーへのアクセス権限が必要です";
+
+// MARK: - Main Voice View
+"greeting" = "こんにちは！";
+"listening" = "聞いています...";
+"speak_schedule" = "スケジュールを話してください";
+"add_new_schedule" = "新しい予定を追加";
+"what_to_do" = "何をしますか？";
+"speak_freely" = "自由に話してください";
+"tap_mic_instruction" = "マイクをタップして\n予定を教えてください";
+"recognized_text" = "認識された内容";
+"try_saying" = "こう言ってみてください";
+
+// MARK: - Example Phrases
+"example_meeting" = "🔴 明日2時に重要なチーム会議";
+"example_deadline" = "🟡 金曜日までにレポート締切";
+"example_chores" = "🟢 毎週月曜の夜にジム";
+
+// MARK: - Todo List
+"extracted_tasks" = "抽出されたタスク";
+"auto_schedule" = "登録する";
+"today_schedule" = "今日の予定";
+"minutes" = "分";
+"edit_title" = "タイトルを編集";
+"select_date" = "日付を選択";
+"today" = "今日";
+"tomorrow" = "明日";
+
+// MARK: - Priority
+"priority_high" = "高";
+"priority_medium" = "中";
+"priority_low" = "低";
+
+// MARK: - Recurrence
+"recurrence_none" = "繰り返しなし";
+"recurrence_daily" = "毎日";
+"recurrence_weekly" = "毎週";
+"recurrence_monthly" = "毎月";
+"recurrence_yearly" = "毎年";
+
+// MARK: - Time Format
+"am" = "午前";
+"pm" = "午後";
+"hour_suffix" = "時";
+
+// MARK: - Analysis
+"analyzing" = "AIがタスクを分析中...";
+"please_wait" = "少々お待ちください";
+"analysis_failed" = "分析失敗";
+
+// MARK: - Calendar
+"calendar_registered" = "カレンダーに登録完了";
+"calendar_failed" = "カレンダー登録失敗";
+"schedule_full" = "今日の予定がいっぱいです";
+"login_required" = "ログインが必要です";
+
+// MARK: - Alerts
+"alert_notice" = "お知らせ";
+"alert_error" = "エラー";
+"alert_completed" = "完了";
+"alert_partial" = "一部完了";
+
+// MARK: - Voice Recognition
+"voice_not_recognized" = "音声が認識されませんでした。もう一度お試しください。";
+"speech_recognition_failed" = "音声認識を開始できません。";
+
+// MARK: - Calendar Messages
+"google_calendar" = "Googleカレンダー";
+"no_tasks_to_register" = "登録するタスクがありません。";
+"token_refresh_failed" = "トークンの更新に失敗しました。再度ログインしてください。";
+"all_events_registered" = "件の予定がすべて登録されました！";
+"partial_events_registered" = "件中%d件登録、%d件失敗";
+"event_registration_failed" = "予定の登録に失敗しました。もう一度お試しください。";
+"event_registration_error" = "予定登録失敗: %@";
+"rate_limit_error" = "リクエストが多すぎます。1分後にもう一度お試しください。";
+"event" = "予定";
+"registered" = "登録済み";
+
+// MARK: - Errors
+"error_invalid_url" = "無効なURLです";
+"error_no_data" = "サーバーからデータを受信できませんでした";
+"error_no_content" = "AI応答に内容がありません";
+"error_parsing_failed" = "応答の解析に失敗しました";
+
+// MARK: - Subscription
+"daily_limit_reached_title" = "本日の無料回数が終了しました";
+"daily_limit_reached_message" = "コーヒー1杯分の価格で、\n1ヶ月間AIがあなたの\n忙しい頭を整理します。";
+"upgrade_to_premium" = "プレミアムにアップグレード";
+"remaining_today" = "本日の残り回数";
+"times" = "回";
+"restore_purchases" = "購入を復元";
+"subscription_auto_renew" = "サブスクリプションは各期間の終了時に自動更新されます。";
+"subscription_cancel_anytime" = "設定からいつでもキャンセルできます。";
+"start_premium" = "プレミアムを始める";
+"monthly_subscription" = "月額プラン";
+"yearly_subscription" = "年額プラン";
+"best_value" = "BEST";
+"monthly_desc" = "気軽に始める";
+"yearly_desc" = "月額 ¥630相当 (30%お得)";
+"benefit_unlimited" = "1日30回の予定登録";
+"benefit_unlimited_desc" = "無料3回 → プレミアム30回";
+"benefit_priority" = "AI優先処理";
+"benefit_priority_desc" = "より速い音声分析";
+"benefit_advanced" = "高度なAI分析";
+"benefit_advanced_desc" = "より正確な優先度判定";
+"benefit_support" = "開発者を応援";
+"benefit_support_desc" = "より良いアプリのために";
+
+// MARK: - Welcome Benefit
+"welcome_gift" = "ウェルカムギフト";
+"welcome_days_remaining" = "残り%d日";
+"welcome_ended_title" = "7日間の体験が終了しました";
+"welcome_ended_message" = "あなたの大切な時間を\nこれからも守りたいです";
+"welcome_ended_cta" = "プレミアムで続ける";
+
+// MARK: - Referral System
+"referral_invite_button" = "友達を招待して今日無制限";
+"referral_share_message" = "🗓 Voice Schedulerで予定管理がすごく楽になった！\n\n話すだけでAIがカレンダーに登録してくれるよ ✨\n\n私の招待コードで登録すると7日間プレミアム無料！\n👉 招待コード: %@\n\nダウンロード: %@";
+"referral_my_code" = "私の招待コード";
+"referral_enter_code" = "招待コードを入力";
+"referral_enter_code_placeholder" = "友達の6桁コード";
+"referral_apply" = "適用する";
+"referral_success_applied" = "🎉 招待コードが適用されました！7日間プレミアムをお楽しみください。";
+"referral_error_invalid_code" = "有効な6桁のコードを入力してください。";
+"referral_error_own_code" = "自分の招待コードは使用できません。";
+"referral_error_already_used" = "既に招待コードを使用しています。";
+"referral_reward_unlimited_title" = "今日は無制限！";
+"referral_reward_unlimited_message" = "友達を招待してくれてありがとう 💜\n今日は登録制限なしでお使いください！";
+"referral_reward_trial_title" = "7日間プレミアム開始！";
+"referral_reward_trial_message" = "招待で登録してくれてありがとう 💜\n7日間プレミアム機能を無料でお試しください！";
+"referral_unlimited_active" = "今日無制限";
+
+// MARK: - API Safety
+"abnormal_activity_blocked" = "異常な活動が検出されたため一時的にブロックされました。しばらくしてから再試行してください。";
+"abnormal_activity_detected" = "短時間に多くのリクエストが検出されました。5分後に再試行してください。";
+"daily_token_limit_reached" = "本日のAPI使用量の上限に達しました。明日再度お試しください。";
+"budget_warning_message" = "予算警告: $%.0fのしきい値に到達 (現在の推定コスト: $%.2f)";
+
+// MARK: - Smart Scheduling
+"smart_recommendations" = "AIおすすめ時間帯";
+"smart_slot_confirmed" = "最適な時間に配置されました";
+"smart_reason_peak_focus" = "集中力ピーク時間";
+"smart_reason_user_pattern" = "あなたのパターンに基づく";
+"smart_reason_priority_match" = "優先度に最適化";
+"smart_reason_free_slot" = "空き時間";
+"smart_reason_balanced_day" = "バランスの良い配置";
+"or" = "または";
+
+// MARK: - Speech Recognition Errors
+"speech_permission_denied" = "音声認識の権限が拒否されました。設定から許可してください。";
+"speech_permission_restricted" = "このデバイスでは音声認識を使用できません。";
+"microphone_permission_required" = "マイクの権限が必要です。設定から許可してください。";
+"speech_no_permission" = "音声認識の権限がありません";
+"speech_unavailable" = "音声認識が利用できません。ネットワーク接続を確認してください。";
+"audio_session_error" = "オーディオセッションの設定に失敗しました";
+"audio_engine_error" = "オーディオエンジンを開始できません";
+
+// MARK: - Store Errors
+"store_load_failed" = "商品の読み込みに失敗しました。";
+"store_restore_failed" = "購入の復元に失敗しました。";
+"store_verification_failed" = "購入の検証に失敗しました。";
+"store_product_not_found" = "商品が見つかりません。";
+"store_purchase_failed" = "購入に失敗しました。";
+"store_period_month" = "月";
+"store_period_year" = "年";
+"store_period_week" = "週";
+"store_period_day" = "日";

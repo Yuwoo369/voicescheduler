@@ -1,0 +1,8 @@
+/* 麦克风权限 */
+"NSMicrophoneUsageDescription" = "需要麦克风权限以通过语音创建日程。";
+
+/* 语音识别权限 */
+"NSSpeechRecognitionUsageDescription" = "语音识别用于将您的语音转换为日程条目。";
+
+/* 日历权限 */
+"NSCalendarsUsageDescription" = "需要日历权限以添加您的日程。";

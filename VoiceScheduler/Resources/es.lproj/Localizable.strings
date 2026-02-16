@@ -1,0 +1,183 @@
+/*
+  Localizable.strings (Spanish)
+  VoiceScheduler
+*/
+
+// MARK: - Common
+"app_name" = "Voice Scheduler";
+"app_tagline" = "Habla y la IA analiza prioridad\npara crear tu agenda automáticamente";
+"cancel" = "Cancelar";
+"confirm" = "Confirmar";
+"delete" = "Eliminar";
+"save" = "Guardar";
+"close" = "Cerrar";
+
+// MARK: - Login
+"login_google" = "Continuar con Google";
+"login_permission_notice" = "Se requiere acceso a Google Calendar";
+
+// MARK: - Main Voice View
+"greeting" = "¡Hola!";
+"listening" = "Escuchando...";
+"speak_schedule" = "Dime tu horario";
+"add_new_schedule" = "Agregar nueva agenda";
+"what_to_do" = "¿Qué necesitas hacer?";
+"speak_freely" = "Habla libremente";
+"tap_mic_instruction" = "Toca el micrófono y dime\ntu agenda";
+"recognized_text" = "Reconocido";
+"try_saying" = "Intenta decir";
+
+// MARK: - Example Phrases
+"example_meeting" = "🔴 Reunión importante mañana 2PM";
+"example_deadline" = "🟡 Informe para el viernes";
+"example_chores" = "🟢 Gimnasio cada lunes noche";
+
+// MARK: - Todo List
+"extracted_tasks" = "Tareas Extraídas";
+"auto_schedule" = "Registrar";
+"today_schedule" = "Agenda de Hoy";
+"minutes" = "min";
+"edit_title" = "Editar Título";
+"select_date" = "Seleccionar Fecha";
+"today" = "Hoy";
+"tomorrow" = "Mañana";
+
+// MARK: - Priority
+"priority_high" = "Alta";
+"priority_medium" = "Media";
+"priority_low" = "Baja";
+
+// MARK: - Recurrence
+"recurrence_none" = "Sin repetición";
+"recurrence_daily" = "Diario";
+"recurrence_weekly" = "Semanal";
+"recurrence_monthly" = "Mensual";
+"recurrence_yearly" = "Anual";
+
+// MARK: - Time Format
+"am" = "AM";
+"pm" = "PM";
+"hour_suffix" = "";
+
+// MARK: - Analysis
+"analyzing" = "La IA está analizando tus tareas...";
+"please_wait" = "Espera un momento";
+"analysis_failed" = "Análisis fallido";
+
+// MARK: - Calendar
+"calendar_registered" = "Añadido al calendario";
+"calendar_failed" = "Error al añadir al calendario";
+"schedule_full" = "La agenda de hoy está llena";
+"login_required" = "Inicio de sesión requerido";
+
+// MARK: - Alerts
+"alert_notice" = "Aviso";
+"alert_error" = "Error";
+"alert_completed" = "Completado";
+"alert_partial" = "Parcialmente completado";
+
+// MARK: - Voice Recognition
+"voice_not_recognized" = "Voz no reconocida. Por favor, inténtalo de nuevo.";
+"speech_recognition_failed" = "No se puede iniciar el reconocimiento de voz.";
+
+// MARK: - Calendar Messages
+"google_calendar" = "Google Calendar";
+"no_tasks_to_register" = "No hay tareas para registrar.";
+"token_refresh_failed" = "Error al actualizar el token. Por favor, inicia sesión de nuevo.";
+"all_events_registered" = " eventos registrados con éxito!";
+"partial_events_registered" = " de %d registrados, %d fallidos";
+"event_registration_failed" = "Error al registrar eventos. Por favor, inténtalo de nuevo.";
+"event_registration_error" = "Error de registro: %@";
+"rate_limit_error" = "Demasiadas solicitudes. Por favor, inténtalo en 1 minuto.";
+"event" = "Evento";
+"registered" = "Registrado";
+
+// MARK: - Errors
+"error_invalid_url" = "URL no válida";
+"error_no_data" = "No se recibieron datos del servidor";
+"error_no_content" = "Sin contenido en la respuesta de IA";
+"error_parsing_failed" = "Error al procesar la respuesta";
+
+// MARK: - Subscription
+"daily_limit_reached_title" = "Límite diario gratuito alcanzado";
+"daily_limit_reached_message" = "Por el precio de un café,\ndeja que la IA organice tu mente\ndurante todo el mes.";
+"upgrade_to_premium" = "Actualizar a Premium";
+"remaining_today" = "Restantes hoy";
+"times" = "";
+"restore_purchases" = "Restaurar compras";
+"subscription_auto_renew" = "La suscripción se renueva automáticamente al final de cada período.";
+"subscription_cancel_anytime" = "Puedes cancelar en cualquier momento desde Ajustes.";
+"start_premium" = "Comenzar Premium";
+"monthly_subscription" = "Mensual";
+"yearly_subscription" = "Anual";
+"best_value" = "MEJOR";
+"monthly_desc" = "Empieza sin compromiso";
+"yearly_desc" = "$4.17/mes (Ahorra 30%)";
+"benefit_unlimited" = "30 agendas por día";
+"benefit_unlimited_desc" = "Gratis 3 → Premium 30";
+"benefit_priority" = "Procesamiento AI Prioritario";
+"benefit_priority_desc" = "Análisis de voz más rápido";
+"benefit_advanced" = "Análisis AI Avanzado";
+"benefit_advanced_desc" = "Detección de prioridad más precisa";
+"benefit_support" = "Apoya al Desarrollador";
+"benefit_support_desc" = "Ayuda a mejorar la app";
+
+// MARK: - Welcome Benefit
+"welcome_gift" = "Regalo de Bienvenida";
+"welcome_days_remaining" = "%d días restantes";
+"welcome_ended_title" = "Tu prueba de 7 días ha terminado";
+"welcome_ended_message" = "Queremos seguir protegiendo\ntu valioso tiempo";
+"welcome_ended_cta" = "Continuar con Premium";
+
+// MARK: - Referral System
+"referral_invite_button" = "Invita amigos, hoy ilimitado";
+"referral_share_message" = "🗓 ¡Voice Scheduler hace que organizar sea muy fácil!\n\nSolo habla y la IA lo añade a tu calendario ✨\n\n¡Regístrate con mi código y obtén 7 días premium gratis!\n👉 Código: %@\n\nDescarga: %@";
+"referral_my_code" = "Mi Código de Invitación";
+"referral_enter_code" = "Ingresa Código";
+"referral_enter_code_placeholder" = "Código de 6 dígitos";
+"referral_apply" = "Aplicar";
+"referral_success_applied" = "🎉 ¡Código aplicado! Disfruta 7 días de premium.";
+"referral_error_invalid_code" = "Ingresa un código válido de 6 dígitos.";
+"referral_error_own_code" = "No puedes usar tu propio código.";
+"referral_error_already_used" = "Ya has usado un código de invitación.";
+"referral_reward_unlimited_title" = "¡Hoy Ilimitado!";
+"referral_reward_unlimited_message" = "Gracias por invitar a un amigo 💜\n¡Disfruta registros ilimitados hoy!";
+"referral_reward_trial_title" = "¡7 Días Premium Iniciado!";
+"referral_reward_trial_message" = "Gracias por unirte con invitación 💜\n¡Disfruta 7 días de funciones premium!";
+"referral_unlimited_active" = "Hoy Ilimitado";
+
+// MARK: - API Safety
+"abnormal_activity_blocked" = "Bloqueado temporalmente por actividad anormal. Inténtalo más tarde.";
+"abnormal_activity_detected" = "Demasiadas solicitudes en poco tiempo. Inténtalo en 5 minutos.";
+"daily_token_limit_reached" = "Límite diario de API alcanzado. Inténtalo mañana.";
+"budget_warning_message" = "Alerta de presupuesto: Umbral de $%.0f alcanzado (Costo estimado: $%.2f)";
+
+// MARK: - Smart Scheduling
+"smart_recommendations" = "Horarios recomendados por IA";
+"smart_slot_confirmed" = "Ubicado en el momento óptimo";
+"smart_reason_peak_focus" = "Hora de máxima concentración";
+"smart_reason_user_pattern" = "Basado en tu patrón";
+"smart_reason_priority_match" = "Optimizado por prioridad";
+"smart_reason_free_slot" = "Horario disponible";
+"smart_reason_balanced_day" = "Agenda equilibrada";
+"or" = "o";
+
+// MARK: - Speech Recognition Errors
+"speech_permission_denied" = "Permiso de reconocimiento de voz denegado. Permítelo en Ajustes.";
+"speech_permission_restricted" = "El reconocimiento de voz no está disponible en este dispositivo.";
+"microphone_permission_required" = "Se requiere permiso del micrófono. Permítelo en Ajustes.";
+"speech_no_permission" = "Sin permiso de reconocimiento de voz";
+"speech_unavailable" = "Reconocimiento de voz no disponible. Verifica tu conexión.";
+"audio_session_error" = "Error en la configuración de audio";
+"audio_engine_error" = "No se puede iniciar el motor de audio";
+
+// MARK: - Store Errors
+"store_load_failed" = "Error al cargar productos.";
+"store_restore_failed" = "Error al restaurar compras.";
+"store_verification_failed" = "Error en la verificación de compra.";
+"store_product_not_found" = "Producto no encontrado.";
+"store_purchase_failed" = "Error en la compra.";
+"store_period_month" = "/mes";
+"store_period_year" = "/año";
+"store_period_week" = "/sem";
+"store_period_day" = "/día";

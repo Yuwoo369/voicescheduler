@@ -1,0 +1,8 @@
+/* Microphone Permission */
+"NSMicrophoneUsageDescription" = "Microphone access is required to register schedules by voice.";
+
+/* Speech Recognition Permission */
+"NSSpeechRecognitionUsageDescription" = "Speech recognition is used to convert your voice into schedule entries.";
+
+/* Calendar Permission */
+"NSCalendarsUsageDescription" = "Calendar access is required to add your events.";

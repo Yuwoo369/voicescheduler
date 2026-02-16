@@ -1,0 +1,183 @@
+/*
+  Localizable.strings (Korean)
+  VoiceScheduler
+*/
+
+// MARK: - Common
+"app_name" = "Voice Scheduler";
+"app_tagline" = "말하면 AI가 우선순위를 분석해\n자동으로 일정을 생성해요";
+"cancel" = "취소";
+"confirm" = "확인";
+"delete" = "삭제";
+"save" = "저장";
+"close" = "닫기";
+
+// MARK: - Login
+"login_google" = "Google 계정으로 시작하기";
+"login_permission_notice" = "Google Calendar 접근 권한이 필요합니다";
+
+// MARK: - Main Voice View
+"greeting" = "안녕하세요!";
+"listening" = "듣고 있어요...";
+"speak_schedule" = "스케줄을 말씀해주세요";
+"add_new_schedule" = "새 일정 추가";
+"what_to_do" = "무엇을 해야 하나요?";
+"speak_freely" = "편하게 말씀하세요";
+"tap_mic_instruction" = "마이크를 누르고\n일정을 자유롭게 말해보세요";
+"recognized_text" = "인식된 내용";
+"try_saying" = "이렇게 말해보세요";
+
+// MARK: - Example Phrases
+"example_meeting" = "🔴 내일 2시 중요한 팀 미팅";
+"example_deadline" = "🟡 금요일까지 보고서 마감";
+"example_chores" = "🟢 매주 월요일 저녁 운동";
+
+// MARK: - Todo List
+"extracted_tasks" = "추출된 할 일";
+"auto_schedule" = "등록하기";
+"today_schedule" = "오늘 일정";
+"minutes" = "분";
+"edit_title" = "제목 수정";
+"select_date" = "날짜 선택";
+"today" = "오늘";
+"tomorrow" = "내일";
+
+// MARK: - Priority
+"priority_high" = "높음";
+"priority_medium" = "보통";
+"priority_low" = "낮음";
+
+// MARK: - Recurrence
+"recurrence_none" = "반복 없음";
+"recurrence_daily" = "매일";
+"recurrence_weekly" = "매주";
+"recurrence_monthly" = "매달";
+"recurrence_yearly" = "매년";
+
+// MARK: - Time Format
+"am" = "오전";
+"pm" = "오후";
+"hour_suffix" = "시";
+
+// MARK: - Analysis
+"analyzing" = "AI가 할 일을 분석하고 있어요...";
+"please_wait" = "잠시만 기다려 주세요";
+"analysis_failed" = "분석 실패";
+
+// MARK: - Calendar
+"calendar_registered" = "캘린더에 등록 완료";
+"calendar_failed" = "캘린더 등록 실패";
+"schedule_full" = "오늘 일정이 가득 찼습니다";
+"login_required" = "로그인이 필요합니다";
+
+// MARK: - Alerts
+"alert_notice" = "알림";
+"alert_error" = "오류";
+"alert_completed" = "완료";
+"alert_partial" = "부분 완료";
+
+// MARK: - Voice Recognition
+"voice_not_recognized" = "음성이 인식되지 않았습니다. 다시 시도해 주세요.";
+"speech_recognition_failed" = "음성 인식을 시작할 수 없습니다.";
+
+// MARK: - Calendar Messages
+"google_calendar" = "Google 캘린더";
+"no_tasks_to_register" = "등록할 일정이 없습니다.";
+"token_refresh_failed" = "토큰 갱신에 실패했습니다. 다시 로그인해 주세요.";
+"all_events_registered" = "개 일정이 모두 등록되었습니다!";
+"partial_events_registered" = "개 중 %d개 등록, %d개 실패";
+"event_registration_failed" = "일정 등록에 실패했습니다. 다시 시도해 주세요.";
+"event_registration_error" = "일정 등록 실패: %@";
+"rate_limit_error" = "요청이 너무 많습니다. 1분 후 다시 시도해 주세요.";
+"event" = "일정";
+"registered" = "등록됨";
+
+// MARK: - Errors
+"error_invalid_url" = "잘못된 URL입니다";
+"error_no_data" = "서버에서 데이터를 받지 못했습니다";
+"error_no_content" = "AI 응답에 내용이 없습니다";
+"error_parsing_failed" = "응답 파싱에 실패했습니다";
+
+// MARK: - Subscription
+"daily_limit_reached_title" = "오늘의 무료 횟수가 끝났습니다";
+"daily_limit_reached_message" = "아메리카노 한 잔 가격이면\n한 달 내내 당신의 복잡한 머릿속을\nAI가 정리해 드립니다.";
+"upgrade_to_premium" = "프리미엄 구독하기";
+"remaining_today" = "오늘 남은 횟수";
+"times" = "회";
+"restore_purchases" = "이전 구매 복원";
+"subscription_auto_renew" = "구독은 선택한 기간이 끝나면 자동 갱신됩니다.";
+"subscription_cancel_anytime" = "언제든지 설정에서 구독을 취소할 수 있습니다.";
+"start_premium" = "프리미엄 시작하기";
+"monthly_subscription" = "월간 구독";
+"yearly_subscription" = "연간 구독";
+"best_value" = "BEST";
+"monthly_desc" = "부담 없이 시작하기";
+"yearly_desc" = "월 $4.17 (30% 할인)";
+"benefit_unlimited" = "하루 30회 일정 등록";
+"benefit_unlimited_desc" = "무료 3회 → 프리미엄 30회";
+"benefit_priority" = "AI 우선 처리";
+"benefit_priority_desc" = "더 빠른 음성 분석 속도";
+"benefit_advanced" = "고급 AI 분석";
+"benefit_advanced_desc" = "더 정확한 우선순위 판단";
+"benefit_support" = "개발자 응원";
+"benefit_support_desc" = "더 나은 앱을 위한 지원";
+
+// MARK: - Welcome Benefit
+"welcome_gift" = "Welcome Gift";
+"welcome_days_remaining" = "%d일 남음";
+"welcome_ended_title" = "7일간의 체험이 종료되었습니다";
+"welcome_ended_message" = "당신의 소중한 시간을\n계속 지켜드리고 싶어요";
+"welcome_ended_cta" = "프리미엄으로 계속하기";
+
+// MARK: - Referral System (친구 초대)
+"referral_invite_button" = "친구 초대하고 오늘 무제한 쓰기";
+"referral_share_message" = "🗓 Voice Scheduler로 일정 관리가 완전 편해졌어!\n\n말만 하면 AI가 알아서 캘린더에 등록해줘 ✨\n\n내 초대 코드로 가입하면 7일 프리미엄 무료!\n👉 초대 코드: %@\n\n다운로드: %@";
+"referral_my_code" = "내 초대 코드";
+"referral_enter_code" = "초대 코드 입력";
+"referral_enter_code_placeholder" = "친구의 초대 코드 6자리";
+"referral_apply" = "적용하기";
+"referral_success_applied" = "🎉 초대 코드가 적용되었습니다! 7일간 프리미엄을 즐겨보세요.";
+"referral_error_invalid_code" = "올바른 6자리 코드를 입력해주세요.";
+"referral_error_own_code" = "자신의 초대 코드는 사용할 수 없습니다.";
+"referral_error_already_used" = "이미 초대 코드를 사용하셨습니다.";
+"referral_reward_unlimited_title" = "오늘 하루 무제한!";
+"referral_reward_unlimited_message" = "친구 초대 감사합니다 💜\n오늘 하루 등록 제한 없이 마음껏 사용하세요!";
+"referral_reward_trial_title" = "7일 프리미엄 시작!";
+"referral_reward_trial_message" = "초대를 통해 가입해주셔서 감사합니다 💜\n7일간 프리미엄 기능을 무료로 체험하세요!";
+"referral_unlimited_active" = "오늘 무제한";
+
+// MARK: - API Safety (안전장치)
+"abnormal_activity_blocked" = "비정상 활동이 감지되어 일시적으로 차단되었습니다. 잠시 후 다시 시도해주세요.";
+"abnormal_activity_detected" = "짧은 시간 내 너무 많은 요청이 감지되었습니다. 5분 후 다시 시도해주세요.";
+"daily_token_limit_reached" = "오늘의 API 사용량 한도에 도달했습니다. 내일 다시 이용해주세요.";
+"budget_warning_message" = "예산 경고: $%.0f 임계값 도달 (현재 추정 비용: $%.2f)";
+
+// MARK: - Smart Scheduling (스마트 추천)
+"smart_recommendations" = "AI 추천 시간대";
+"smart_slot_confirmed" = "최적의 시간에 배치됨";
+"smart_reason_peak_focus" = "집중력 최고 시간";
+"smart_reason_user_pattern" = "당신의 패턴 기반";
+"smart_reason_priority_match" = "우선순위 최적화";
+"smart_reason_free_slot" = "여유 있는 시간";
+"smart_reason_balanced_day" = "하루 균형 배치";
+"or" = "또는";
+
+// MARK: - Speech Recognition Errors
+"speech_permission_denied" = "음성 인식 권한이 거부되었습니다. 설정에서 허용해주세요.";
+"speech_permission_restricted" = "이 기기에서는 음성 인식을 사용할 수 없습니다.";
+"microphone_permission_required" = "마이크 권한이 필요합니다. 설정에서 허용해주세요.";
+"speech_no_permission" = "음성 인식 권한이 없습니다";
+"speech_unavailable" = "음성 인식을 사용할 수 없습니다. 네트워크 연결을 확인해주세요.";
+"audio_session_error" = "오디오 세션 설정에 실패했습니다";
+"audio_engine_error" = "오디오 엔진을 시작할 수 없습니다";
+
+// MARK: - Store Errors
+"store_load_failed" = "상품을 불러오는데 실패했습니다.";
+"store_restore_failed" = "구매 복원에 실패했습니다.";
+"store_verification_failed" = "구매 검증에 실패했습니다.";
+"store_product_not_found" = "상품을 찾을 수 없습니다.";
+"store_purchase_failed" = "구매에 실패했습니다.";
+"store_period_month" = "월";
+"store_period_year" = "년";
+"store_period_week" = "주";
+"store_period_day" = "일";

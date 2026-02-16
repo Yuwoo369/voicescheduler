@@ -1,0 +1,788 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B52D8D42F25EC18006BF125 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 5B52D8D32F25EC18006BF125 /* GoogleSignIn */; };
+		5B52D8D62F25EC18006BF125 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5B52D8D52F25EC18006BF125 /* GoogleSignInSwift */; };
+		5BW1D8E02F26A000006BF125 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BW1D8DF2F26A000006BF125 /* WidgetKit.framework */; };
+		5BW1D8E12F26A000006BF125 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BW1D8E22F26A000006BF125 /* SwiftUI.framework */; };
+		5BW1D8E32F26A000006BF125 /* VoiceSchedulerWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5BW1D8DD2F26A000006BF125 /* VoiceSchedulerWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B52D86C2F25C9E6006BF125 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B52D8562F25C9E6006BF125 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B52D85D2F25C9E6006BF125;
+			remoteInfo = VoiceScheduler;
+		};
+		5B52D8762F25C9E6006BF125 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B52D8562F25C9E6006BF125 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B52D85D2F25C9E6006BF125;
+			remoteInfo = VoiceScheduler;
+		};
+		5BW1D8E42F26A000006BF125 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B52D8562F25C9E6006BF125 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BW1D8DC2F26A000006BF125;
+			remoteInfo = VoiceSchedulerWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5BW1D8E72F26A000006BF125 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5BW1D8E32F26A000006BF125 /* VoiceSchedulerWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5B52D85E2F25C9E6006BF125 /* VoiceScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B52D86B2F25C9E6006BF125 /* VoiceSchedulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceSchedulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B52D8752F25C9E6006BF125 /* VoiceSchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceSchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BW1D8DD2F26A000006BF125 /* VoiceSchedulerWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VoiceSchedulerWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BW1D8DF2F26A000006BF125 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5BW1D8E22F26A000006BF125 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5BW1D8F02F26A000006BF125 /* Exceptions for "VoiceSchedulerWidget" folder in "VoiceSchedulerWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5BW1D8DC2F26A000006BF125 /* VoiceSchedulerWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5B52D8602F25C9E6006BF125 /* VoiceScheduler */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VoiceScheduler;
+			sourceTree = "<group>";
+		};
+		5B52D86E2F25C9E6006BF125 /* VoiceSchedulerTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VoiceSchedulerTests;
+			sourceTree = "<group>";
+		};
+		5B52D8782F25C9E6006BF125 /* VoiceSchedulerUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = VoiceSchedulerUITests;
+			sourceTree = "<group>";
+		};
+		5BW1D8E82F26A000006BF125 /* VoiceSchedulerWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5BW1D8F02F26A000006BF125 /* Exceptions for "VoiceSchedulerWidget" folder in "VoiceSchedulerWidgetExtension" target */,
+			);
+			path = VoiceSchedulerWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B52D85B2F25C9E6006BF125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B52D8D42F25EC18006BF125 /* GoogleSignIn in Frameworks */,
+				5B52D8D62F25EC18006BF125 /* GoogleSignInSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B52D8682F25C9E6006BF125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B52D8722F25C9E6006BF125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BW1D8DA2F26A000006BF125 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BW1D8E12F26A000006BF125 /* SwiftUI.framework in Frameworks */,
+				5BW1D8E02F26A000006BF125 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B52D8552F25C9E6006BF125 = {
+			isa = PBXGroup;
+			children = (
+				5B52D8602F25C9E6006BF125 /* VoiceScheduler */,
+				5B52D86E2F25C9E6006BF125 /* VoiceSchedulerTests */,
+				5B52D8782F25C9E6006BF125 /* VoiceSchedulerUITests */,
+				5BW1D8E82F26A000006BF125 /* VoiceSchedulerWidget */,
+				5BW1D8DE2F26A000006BF125 /* Frameworks */,
+				5B52D85F2F25C9E6006BF125 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B52D85F2F25C9E6006BF125 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B52D85E2F25C9E6006BF125 /* VoiceScheduler.app */,
+				5B52D86B2F25C9E6006BF125 /* VoiceSchedulerTests.xctest */,
+				5B52D8752F25C9E6006BF125 /* VoiceSchedulerUITests.xctest */,
+				5BW1D8DD2F26A000006BF125 /* VoiceSchedulerWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BW1D8DE2F26A000006BF125 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BW1D8DF2F26A000006BF125 /* WidgetKit.framework */,
+				5BW1D8E22F26A000006BF125 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B52D85D2F25C9E6006BF125 /* VoiceScheduler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B52D87F2F25C9E6006BF125 /* Build configuration list for PBXNativeTarget "VoiceScheduler" */;
+			buildPhases = (
+				5B52D85A2F25C9E6006BF125 /* Sources */,
+				5B52D85B2F25C9E6006BF125 /* Frameworks */,
+				5B52D85C2F25C9E6006BF125 /* Resources */,
+				5BW1D8E72F26A000006BF125 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BW1D8E52F26A000006BF125 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5B52D8602F25C9E6006BF125 /* VoiceScheduler */,
+			);
+			name = VoiceScheduler;
+			packageProductDependencies = (
+				5B52D8D32F25EC18006BF125 /* GoogleSignIn */,
+				5B52D8D52F25EC18006BF125 /* GoogleSignInSwift */,
+			);
+			productName = VoiceScheduler;
+			productReference = 5B52D85E2F25C9E6006BF125 /* VoiceScheduler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B52D86A2F25C9E6006BF125 /* VoiceSchedulerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B52D8822F25C9E6006BF125 /* Build configuration list for PBXNativeTarget "VoiceSchedulerTests" */;
+			buildPhases = (
+				5B52D8672F25C9E6006BF125 /* Sources */,
+				5B52D8682F25C9E6006BF125 /* Frameworks */,
+				5B52D8692F25C9E6006BF125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B52D86D2F25C9E6006BF125 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5B52D86E2F25C9E6006BF125 /* VoiceSchedulerTests */,
+			);
+			name = VoiceSchedulerTests;
+			packageProductDependencies = (
+			);
+			productName = VoiceSchedulerTests;
+			productReference = 5B52D86B2F25C9E6006BF125 /* VoiceSchedulerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B52D8742F25C9E6006BF125 /* VoiceSchedulerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B52D8852F25C9E6006BF125 /* Build configuration list for PBXNativeTarget "VoiceSchedulerUITests" */;
+			buildPhases = (
+				5B52D8712F25C9E6006BF125 /* Sources */,
+				5B52D8722F25C9E6006BF125 /* Frameworks */,
+				5B52D8732F25C9E6006BF125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B52D8772F25C9E6006BF125 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5B52D8782F25C9E6006BF125 /* VoiceSchedulerUITests */,
+			);
+			name = VoiceSchedulerUITests;
+			packageProductDependencies = (
+			);
+			productName = VoiceSchedulerUITests;
+			productReference = 5B52D8752F25C9E6006BF125 /* VoiceSchedulerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		5BW1D8DC2F26A000006BF125 /* VoiceSchedulerWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BW1D8EA2F26A000006BF125 /* Build configuration list for PBXNativeTarget "VoiceSchedulerWidgetExtension" */;
+			buildPhases = (
+				5BW1D8D92F26A000006BF125 /* Sources */,
+				5BW1D8DA2F26A000006BF125 /* Frameworks */,
+				5BW1D8DB2F26A000006BF125 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5BW1D8E82F26A000006BF125 /* VoiceSchedulerWidget */,
+			);
+			name = VoiceSchedulerWidgetExtension;
+			productName = VoiceSchedulerWidgetExtension;
+			productReference = 5BW1D8DD2F26A000006BF125 /* VoiceSchedulerWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B52D8562F25C9E6006BF125 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					5B52D85D2F25C9E6006BF125 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					5B52D86A2F25C9E6006BF125 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 5B52D85D2F25C9E6006BF125;
+					};
+					5B52D8742F25C9E6006BF125 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 5B52D85D2F25C9E6006BF125;
+					};
+					5BW1D8DC2F26A000006BF125 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = 5B52D8592F25C9E6006BF125 /* Build configuration list for PBXProject "VoiceScheduler" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ko,
+				ja,
+				"zh-Hans",
+				"pt-BR",
+				hi,
+				es,
+				fr,
+				"zh-Hant",
+			);
+			mainGroup = 5B52D8552F25C9E6006BF125;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5B52D8D22F25EC18006BF125 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5B52D85F2F25C9E6006BF125 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B52D85D2F25C9E6006BF125 /* VoiceScheduler */,
+				5B52D86A2F25C9E6006BF125 /* VoiceSchedulerTests */,
+				5B52D8742F25C9E6006BF125 /* VoiceSchedulerUITests */,
+				5BW1D8DC2F26A000006BF125 /* VoiceSchedulerWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B52D85C2F25C9E6006BF125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B52D8692F25C9E6006BF125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B52D8732F25C9E6006BF125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BW1D8DB2F26A000006BF125 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B52D85A2F25C9E6006BF125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B52D8672F25C9E6006BF125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B52D8712F25C9E6006BF125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BW1D8D92F26A000006BF125 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B52D86D2F25C9E6006BF125 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B52D85D2F25C9E6006BF125 /* VoiceScheduler */;
+			targetProxy = 5B52D86C2F25C9E6006BF125 /* PBXContainerItemProxy */;
+		};
+		5B52D8772F25C9E6006BF125 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B52D85D2F25C9E6006BF125 /* VoiceScheduler */;
+			targetProxy = 5B52D8762F25C9E6006BF125 /* PBXContainerItemProxy */;
+		};
+		5BW1D8E52F26A000006BF125 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BW1D8DC2F26A000006BF125 /* VoiceSchedulerWidgetExtension */;
+			targetProxy = 5BW1D8E42F26A000006BF125 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5B52D87D2F25C9E6006BF125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B52D87E2F25C9E6006BF125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		5B52D8802F25C9E6006BF125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7FFPX56J58;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taeseok.voicescheduler2026;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B52D8812F25C9E6006BF125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7FFPX56J58;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taeseok.voicescheduler2026;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B52D8832F25C9E6006BF125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7FFPX56J58;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.voicescheduler.VoiceSchedulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoiceScheduler.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VoiceScheduler";
+			};
+			name = Debug;
+		};
+		5B52D8842F25C9E6006BF125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7FFPX56J58;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.voicescheduler.VoiceSchedulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoiceScheduler.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VoiceScheduler";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B52D8862F25C9E6006BF125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7FFPX56J58;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.voicescheduler.VoiceSchedulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VoiceScheduler;
+			};
+			name = Debug;
+		};
+		5B52D8872F25C9E6006BF125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7FFPX56J58;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.voicescheduler.VoiceSchedulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VoiceScheduler;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BW1D8EB2F26A000006BF125 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7FFPX56J58;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VoiceSchedulerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VoiceSchedulerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taeseok.voicescheduler2026.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BW1D8EC2F26A000006BF125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7FFPX56J58;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VoiceSchedulerWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VoiceSchedulerWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taeseok.voicescheduler2026.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B52D8592F25C9E6006BF125 /* Build configuration list for PBXProject "VoiceScheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B52D87D2F25C9E6006BF125 /* Debug */,
+				5B52D87E2F25C9E6006BF125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B52D87F2F25C9E6006BF125 /* Build configuration list for PBXNativeTarget "VoiceScheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B52D8802F25C9E6006BF125 /* Debug */,
+				5B52D8812F25C9E6006BF125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B52D8822F25C9E6006BF125 /* Build configuration list for PBXNativeTarget "VoiceSchedulerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B52D8832F25C9E6006BF125 /* Debug */,
+				5B52D8842F25C9E6006BF125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B52D8852F25C9E6006BF125 /* Build configuration list for PBXNativeTarget "VoiceSchedulerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B52D8862F25C9E6006BF125 /* Debug */,
+				5B52D8872F25C9E6006BF125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BW1D8EA2F26A000006BF125 /* Build configuration list for PBXNativeTarget "VoiceSchedulerWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BW1D8EB2F26A000006BF125 /* Debug */,
+				5BW1D8EC2F26A000006BF125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B52D8D22F25EC18006BF125 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B52D8D32F25EC18006BF125 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B52D8D22F25EC18006BF125 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		5B52D8D52F25EC18006BF125 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B52D8D22F25EC18006BF125 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5B52D8562F25C9E6006BF125 /* Project object */;
+}

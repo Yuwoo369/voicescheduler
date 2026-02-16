@@ -1,0 +1,183 @@
+/*
+  Localizable.strings (Simplified Chinese)
+  VoiceScheduler
+*/
+
+// MARK: - Common
+"app_name" = "Voice Scheduler";
+"app_tagline" = "说出来，AI分析优先级\n自动生成日程";
+"cancel" = "取消";
+"confirm" = "确认";
+"delete" = "删除";
+"save" = "保存";
+"close" = "关闭";
+
+// MARK: - Login
+"login_google" = "使用Google账号继续";
+"login_permission_notice" = "需要访问Google日历的权限";
+
+// MARK: - Main Voice View
+"greeting" = "你好！";
+"listening" = "正在听...";
+"speak_schedule" = "请说您的日程";
+"add_new_schedule" = "添加新日程";
+"what_to_do" = "你需要做什么？";
+"speak_freely" = "请随意说";
+"tap_mic_instruction" = "点击麦克风\n告诉我您的日程";
+"recognized_text" = "识别内容";
+"try_saying" = "试着说";
+
+// MARK: - Example Phrases
+"example_meeting" = "🔴 明天2点重要团队会议";
+"example_deadline" = "🟡 周五报告截止";
+"example_chores" = "🟢 每周一晚上健身";
+
+// MARK: - Todo List
+"extracted_tasks" = "提取的任务";
+"auto_schedule" = "添加日程";
+"today_schedule" = "今日日程";
+"minutes" = "分钟";
+"edit_title" = "编辑标题";
+"select_date" = "选择日期";
+"today" = "今天";
+"tomorrow" = "明天";
+
+// MARK: - Priority
+"priority_high" = "高";
+"priority_medium" = "中";
+"priority_low" = "低";
+
+// MARK: - Recurrence
+"recurrence_none" = "不重复";
+"recurrence_daily" = "每天";
+"recurrence_weekly" = "每周";
+"recurrence_monthly" = "每月";
+"recurrence_yearly" = "每年";
+
+// MARK: - Time Format
+"am" = "上午";
+"pm" = "下午";
+"hour_suffix" = "点";
+
+// MARK: - Analysis
+"analyzing" = "AI正在分析任务...";
+"please_wait" = "请稍候";
+"analysis_failed" = "分析失败";
+
+// MARK: - Calendar
+"calendar_registered" = "已添加到日历";
+"calendar_failed" = "添加到日历失败";
+"schedule_full" = "今天的日程已满";
+"login_required" = "需要登录";
+
+// MARK: - Alerts
+"alert_notice" = "通知";
+"alert_error" = "错误";
+"alert_completed" = "完成";
+"alert_partial" = "部分完成";
+
+// MARK: - Voice Recognition
+"voice_not_recognized" = "未识别到语音，请重试。";
+"speech_recognition_failed" = "无法启动语音识别。";
+
+// MARK: - Calendar Messages
+"google_calendar" = "Google日历";
+"no_tasks_to_register" = "没有要注册的任务。";
+"token_refresh_failed" = "令牌刷新失败，请重新登录。";
+"all_events_registered" = "个日程已全部注册！";
+"partial_events_registered" = "个中%d个已注册，%d个失败";
+"event_registration_failed" = "日程注册失败，请重试。";
+"event_registration_error" = "日程注册失败: %@";
+"rate_limit_error" = "请求过多，请1分钟后重试。";
+"event" = "日程";
+"registered" = "已注册";
+
+// MARK: - Errors
+"error_invalid_url" = "无效的URL";
+"error_no_data" = "未从服务器接收到数据";
+"error_no_content" = "AI响应中没有内容";
+"error_parsing_failed" = "解析响应失败";
+
+// MARK: - Subscription
+"daily_limit_reached_title" = "今日的免费次数已用完";
+"daily_limit_reached_message" = "一杯咖啡的价格，\n让AI帮您整理繁忙的思绪\n整整一个月。";
+"upgrade_to_premium" = "升级到高级版";
+"remaining_today" = "今日剩余次数";
+"times" = "次";
+"restore_purchases" = "恢复购买";
+"subscription_auto_renew" = "订阅会在每个周期结束时自动续订。";
+"subscription_cancel_anytime" = "您可以随时在设置中取消。";
+"start_premium" = "开始高级版";
+"monthly_subscription" = "月度订阅";
+"yearly_subscription" = "年度订阅";
+"best_value" = "最划算";
+"monthly_desc" = "无负担开始";
+"yearly_desc" = "月均 ¥30 (省30%)";
+"benefit_unlimited" = "每日30次日程登记";
+"benefit_unlimited_desc" = "免费3次 → 高级版30次";
+"benefit_priority" = "AI优先处理";
+"benefit_priority_desc" = "更快的语音分析速度";
+"benefit_advanced" = "高级AI分析";
+"benefit_advanced_desc" = "更准确的优先级判断";
+"benefit_support" = "支持开发者";
+"benefit_support_desc" = "帮助改进应用";
+
+// MARK: - Welcome Benefit
+"welcome_gift" = "欢迎礼";
+"welcome_days_remaining" = "剩余%d天";
+"welcome_ended_title" = "7天体验已结束";
+"welcome_ended_message" = "我们想继续守护\n您的宝贵时间";
+"welcome_ended_cta" = "升级高级版继续";
+
+// MARK: - Referral System
+"referral_invite_button" = "邀请好友，今日无限用";
+"referral_share_message" = "🗓 Voice Scheduler让日程管理变得超简单！\n\n只要说话，AI就能帮你添加到日历 ✨\n\n用我的邀请码注册，7天高级版免费！\n👉 邀请码: %@\n\n下载: %@";
+"referral_my_code" = "我的邀请码";
+"referral_enter_code" = "输入邀请码";
+"referral_enter_code_placeholder" = "好友的6位邀请码";
+"referral_apply" = "应用";
+"referral_success_applied" = "🎉 邀请码已应用！享受7天高级版体验。";
+"referral_error_invalid_code" = "请输入有效的6位邀请码。";
+"referral_error_own_code" = "不能使用自己的邀请码。";
+"referral_error_already_used" = "您已经使用过邀请码了。";
+"referral_reward_unlimited_title" = "今日无限！";
+"referral_reward_unlimited_message" = "感谢邀请好友 💜\n今天可以无限制使用！";
+"referral_reward_trial_title" = "7天高级版开始！";
+"referral_reward_trial_message" = "感谢通过邀请注册 💜\n7天内免费享受高级版功能！";
+"referral_unlimited_active" = "今日无限";
+
+// MARK: - API Safety
+"abnormal_activity_blocked" = "检测到异常活动，已暂时阻止。请稍后重试。";
+"abnormal_activity_detected" = "短时间内检测到过多请求。请5分钟后重试。";
+"daily_token_limit_reached" = "已达到今日API使用限额。请明天再试。";
+"budget_warning_message" = "预算警告: 已达到$%.0f阈值 (当前估计费用: $%.2f)";
+
+// MARK: - Smart Scheduling
+"smart_recommendations" = "AI推荐时间";
+"smart_slot_confirmed" = "已安排在最佳时间";
+"smart_reason_peak_focus" = "专注力高峰时段";
+"smart_reason_user_pattern" = "基于您的习惯";
+"smart_reason_priority_match" = "优先级优化";
+"smart_reason_free_slot" = "空闲时段";
+"smart_reason_balanced_day" = "均衡安排";
+"or" = "或";
+
+// MARK: - Speech Recognition Errors
+"speech_permission_denied" = "语音识别权限被拒绝。请在设置中允许。";
+"speech_permission_restricted" = "此设备无法使用语音识别。";
+"microphone_permission_required" = "需要麦克风权限。请在设置中允许。";
+"speech_no_permission" = "没有语音识别权限";
+"speech_unavailable" = "语音识别不可用。请检查网络连接。";
+"audio_session_error" = "音频会话设置失败";
+"audio_engine_error" = "无法启动音频引擎";
+
+// MARK: - Store Errors
+"store_load_failed" = "加载商品失败。";
+"store_restore_failed" = "恢复购买失败。";
+"store_verification_failed" = "购买验证失败。";
+"store_product_not_found" = "未找到商品。";
+"store_purchase_failed" = "购买失败。";
+"store_period_month" = "月";
+"store_period_year" = "年";
+"store_period_week" = "周";
+"store_period_day" = "天";

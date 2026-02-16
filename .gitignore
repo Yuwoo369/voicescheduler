@@ -1,0 +1,80 @@
+# ================================
+# VoiceScheduler .gitignore
+# ================================
+
+# ================================
+# 민감한 정보 (절대 커밋하지 마세요!)
+# ================================
+Secrets.plist
+*.xcconfig
+
+# ================================
+# Xcode
+# ================================
+## User settings
+xcuserdata/
+
+## Build generated
+build/
+build_release/
+build_sim/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+*.xcworkspace
+!default.xcworkspace
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# ================================
+# Swift Package Manager
+# ================================
+.build/
+Package.resolved
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+
+# ================================
+# CocoaPods
+# ================================
+Pods/
+*.xcworkspace
+
+# ================================
+# macOS
+# ================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ================================
+# IDEs
+# ================================
+.idea/
+*.swp
+*.swo
+*~
+
+# ================================
+# Fastlane
+# ================================
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output

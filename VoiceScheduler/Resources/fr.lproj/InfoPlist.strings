@@ -1,0 +1,8 @@
+/* Permission Microphone */
+"NSMicrophoneUsageDescription" = "L'accès au microphone est nécessaire pour créer des événements par la voix.";
+
+/* Permission Reconnaissance Vocale */
+"NSSpeechRecognitionUsageDescription" = "La reconnaissance vocale convertit votre voix en entrées d'agenda.";
+
+/* Permission Calendrier */
+"NSCalendarsUsageDescription" = "L'accès au calendrier est nécessaire pour ajouter vos événements.";
