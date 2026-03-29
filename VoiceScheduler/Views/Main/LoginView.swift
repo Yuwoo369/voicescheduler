@@ -1,8 +1,9 @@
 // LoginView.swift
-// 구글 로그인 화면입니다.
+// 로그인 화면입니다.
 // 앱을 처음 실행하거나 로그아웃 상태일 때 이 화면이 보입니다.
 
 import SwiftUI
+import AuthenticationServices
 
 struct LoginView: View {
 
@@ -38,7 +39,6 @@ struct LoginView: View {
                 // ----------------------------------------
                 VStack(spacing: 20) {
                     // 마이크 아이콘 (SF Symbols 사용)
-                    // SF Symbols: 애플이 제공하는 무료 아이콘 모음
                     Image(systemName: "mic.circle.fill")
                         .font(.system(size: 100))  // 아이콘 크기
                         .foregroundStyle(          // 그라데이션 색상
@@ -65,17 +65,40 @@ struct LoginView: View {
                 Spacer()
 
                 // ----------------------------------------
-                // 구글 로그인 버튼
+                // 로그인 버튼 영역
                 // ----------------------------------------
                 VStack(spacing: 16) {
-                    // 로그인 버튼
+
+                    // ----------------------------------------
+                    // Sign in with Apple 버튼
+                    // ----------------------------------------
+                    SignInWithAppleButton(.signIn) { request in
+                        request.requestedScopes = [.fullName, .email]
+                    } onCompletion: { _ in }
+                    .signInWithAppleButtonStyle(.white)
+                    .frame(height: 52)
+                    .cornerRadius(12)
+                    .overlay(
+                        // 실제 탭을 처리하는 투명 버튼
+                        Button(action: {
+                            authManager.signInWithApple()
+                        }) {
+                            Color.clear
+                        }
+                    )
+                    .disabled(authManager.isLoading)
+                    .opacity(authManager.isLoading ? 0.6 : 1)
+
+                    // ----------------------------------------
+                    // 구글 로그인 버튼
+                    // ----------------------------------------
                     Button(action: {
                         // 버튼 클릭 시 구글 로그인 시작
                         authManager.signIn()
                     }) {
                         // 버튼 내부 디자인
                         HStack(spacing: 12) {
-                            // 구글 로고 (실제 앱에서는 구글 로고 이미지 사용 권장)
+                            // 구글 로고
                             Image(systemName: "g.circle.fill")
                                 .font(.title2)
 
@@ -105,6 +128,51 @@ struct LoginView: View {
                             .foregroundColor(.red)
                             .multilineTextAlignment(.center)
                     }
+
+                    // ----------------------------------------
+                    // 구분선 (or)
+                    // ----------------------------------------
+                    HStack {
+                        Rectangle()
+                            .fill(Color.white.opacity(0.3))
+                            .frame(height: 1)
+                        Text(L10n.demoOr)
+                            .font(.subheadline)
+                            .foregroundColor(.white.opacity(0.5))
+                        Rectangle()
+                            .fill(Color.white.opacity(0.3))
+                            .frame(height: 1)
+                    }
+
+                    // ----------------------------------------
+                    // 데모 모드 버튼
+                    // ----------------------------------------
+                    Button(action: {
+                        authManager.enterDemoMode()
+                    }) {
+                        HStack(spacing: 12) {
+                            Image(systemName: "play.circle.fill")
+                                .font(.title2)
+
+                            Text(L10n.tryDemoMode)
+                                .font(.headline)
+                        }
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 16)
+                        .background(Color.clear)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(Color.white.opacity(0.5), lineWidth: 1.5)
+                        )
+                        .cornerRadius(12)
+                    }
+
+                    // 데모 모드 안내 문구
+                    Text(L10n.demoModeDescription)
+                        .font(.caption)
+                        .foregroundColor(.white.opacity(0.5))
+                        .multilineTextAlignment(.center)
 
                     // 권한 안내 문구
                     Text(L10n.loginPermissionNotice)

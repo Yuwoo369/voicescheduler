@@ -181,3 +181,12 @@
 "store_period_year" = "年";
 "store_period_week" = "週";
 "store_period_day" = "日";
+
+// MARK: - Demo Mode (デモモード)
+"demo_mode" = "デモモード";
+"try_demo_mode" = "デモモードを試す";
+"demo_mode_description" = "音声 + AI分析が利用可能。カレンダー登録はシミュレーションです。";
+"demo_banner" = "デモモード — Googleログインで全機能を利用";
+"apple_sign_in_banner" = "Appleログイン — カレンダー同期にはGoogleログインが必要";
+"demo_calendar_simulated" = "カレンダー登録シミュレーション（デモモード）";
+"demo_or" = "または";

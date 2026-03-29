@@ -181,3 +181,12 @@
 "store_period_year" = "/वर्ष";
 "store_period_week" = "/सप्ताह";
 "store_period_day" = "/दिन";
+
+// MARK: - Demo Mode (डेमो मोड)
+"demo_mode" = "डेमो मोड";
+"try_demo_mode" = "डेमो मोड आज़माएं";
+"demo_mode_description" = "आवाज + AI विश्लेषण उपलब्ध। कैलेंडर पंजीकरण सिम्युलेटेड।";
+"demo_banner" = "डेमो मोड — पूर्ण सुविधाओं के लिए Google से साइन इन करें";
+"apple_sign_in_banner" = "Apple साइन इन — कैलेंडर सिंक के लिए Google लॉगिन आवश्यक";
+"demo_calendar_simulated" = "कैलेंडर पंजीकरण सिम्युलेटेड (डेमो मोड)";
+"demo_or" = "या";

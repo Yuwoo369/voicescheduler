@@ -25,6 +25,12 @@ class GoogleAuthManager: ObservableObject {
     // isSignedIn: 로그인 되어있는지 여부 (true = 로그인됨, false = 로그인 안됨)
     @Published var isSignedIn: Bool = false
 
+    // 데모 모드 여부 (Google 로그인 없이 앱 체험)
+    @Published var isDemoMode: Bool = false
+
+    // Apple 로그인 모드 여부
+    @Published var isAppleSignIn: Bool = false
+
     // 로그인한 사용자의 이메일 주소
     @Published var userEmail: String = ""
 
@@ -83,6 +89,67 @@ class GoogleAuthManager: ObservableObject {
     init() {
         // 앱이 시작될 때 이전에 저장된 로그인 정보가 있는지 확인합니다
         loadSavedTokens()
+
+        // Google 토큰이 없으면 Apple 로그인 복원 시도
+        if accessToken == nil {
+            restoreAppleSignIn()
+        }
+    }
+
+    // --------------------------------------------------------
+    // MARK: - 데모 모드
+    // --------------------------------------------------------
+
+    /// 데모 모드 진입 (Google 로그인 없이 앱 체험)
+    func enterDemoMode() {
+        isDemoMode = true
+        isSignedIn = true
+        userName = "Demo User"
+        userEmail = "demo@voicescheduler.app"
+        userProfileImageURL = nil
+    }
+
+    // --------------------------------------------------------
+    // MARK: - Apple 로그인
+    // --------------------------------------------------------
+
+    /// Sign in with Apple을 시작합니다
+    func signInWithApple() {
+        isLoading = true
+        errorMessage = nil
+
+        let appleAuth = AppleAuthManager.shared
+        appleAuth.onSignInComplete = { [weak self] userID, name, email in
+            DispatchQueue.main.async {
+                self?.isLoading = false
+                self?.isAppleSignIn = true
+                self?.userName = name
+                self?.userEmail = email ?? "private@appleid.com"
+                self?.userProfileImageURL = nil
+                self?.isSignedIn = true
+
+                #if DEBUG
+                print("✅ Apple Sign In 완료: \(name), \(email ?? "no email")")
+                #endif
+            }
+        }
+        appleAuth.signIn()
+    }
+
+    /// 저장된 Apple 로그인 상태를 복원합니다
+    private func restoreAppleSignIn() {
+        guard let userID = KeychainManager.shared.read(forKey: KeychainManager.Keys.appleUserID) else {
+            return
+        }
+
+        AppleAuthManager.shared.checkCredentialState(userID: userID) { [weak self] authorized in
+            if authorized {
+                self?.isAppleSignIn = true
+                self?.userName = KeychainManager.shared.read(forKey: KeychainManager.Keys.appleUserName) ?? "Apple User"
+                self?.userEmail = KeychainManager.shared.read(forKey: KeychainManager.Keys.appleUserEmail) ?? "private@appleid.com"
+                self?.isSignedIn = true
+            }
+        }
     }
 
     // --------------------------------------------------------
@@ -307,6 +374,8 @@ class GoogleAuthManager: ObservableObject {
     /// 로그아웃 함수 - 저장된 모든 정보를 삭제합니다
     func signOut() {
         // 모든 상태 초기화
+        isDemoMode = false
+        isAppleSignIn = false
         isSignedIn = false
         userEmail = ""
         userName = ""
@@ -317,6 +386,9 @@ class GoogleAuthManager: ObservableObject {
         // Keychain에서 토큰 삭제
         KeychainManager.shared.delete(forKey: KeychainManager.Keys.accessToken)
         KeychainManager.shared.delete(forKey: KeychainManager.Keys.refreshToken)
+        KeychainManager.shared.delete(forKey: KeychainManager.Keys.appleUserID)
+        KeychainManager.shared.delete(forKey: KeychainManager.Keys.appleUserName)
+        KeychainManager.shared.delete(forKey: KeychainManager.Keys.appleUserEmail)
     }
 
     // --------------------------------------------------------
@@ -350,6 +422,7 @@ class GoogleAuthManager: ObservableObject {
 
     /// 다른 곳에서 구글 API를 호출할 때 사용할 Access Token을 반환합니다
     func getAccessToken() -> String? {
+        if isDemoMode || isAppleSignIn { return "demo_token" }
         return accessToken
     }
 
@@ -448,6 +521,12 @@ class GoogleAuthManager: ObservableObject {
     /// Access Token이 유효한지 확인하고, 필요하면 갱신합니다
     /// - Parameter completion: 유효한 토큰 반환 (실패 시 nil)
     func getValidAccessToken(completion: @escaping (String?) -> Void) {
+        // 데모 모드 또는 Apple 로그인에서는 즉시 demo_token 반환
+        if isDemoMode || isAppleSignIn {
+            completion("demo_token")
+            return
+        }
+
         #if DEBUG
         print("🔍 getValidAccessToken 호출됨")
         #endif

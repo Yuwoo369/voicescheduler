@@ -128,5 +128,8 @@ extension KeychainManager {
     enum Keys {
         static let accessToken = "google_access_token"
         static let refreshToken = "google_refresh_token"
+        static let appleUserID = "apple_user_id"
+        static let appleUserName = "apple_user_name"
+        static let appleUserEmail = "apple_user_email"
     }
 }

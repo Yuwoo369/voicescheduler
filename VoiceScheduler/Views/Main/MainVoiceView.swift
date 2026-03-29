@@ -322,77 +322,116 @@ struct MainVoiceView: View {
     // ============================================
 
     private var userHeader: some View {
-        HStack {
-            // 프로필 이미지
-            if let imageURL = authManager.userProfileImageURL {
-                // AsyncImage: URL에서 이미지를 비동기로 불러옴
-                AsyncImage(url: imageURL) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                } placeholder: {
-                    // 이미지 로딩 중일 때 보여줄 뷰
-                    Circle()
-                        .fill(Color.gray.opacity(0.3))
-                }
-                .frame(width: 40, height: 40)
-                .clipShape(Circle())  // 원형으로 자르기
-            }
-
-            // 인사말
-            VStack(alignment: .leading, spacing: 2) {
-                Text(L10n.greeting)
-                    .font(.subheadline)
-                    .foregroundColor(.white.opacity(0.7))
-
-                Text(authManager.userName)
-                    .font(.headline)
-                    .foregroundColor(.white)
-            }
-
-            Spacer()  // 나머지 공간 차지
-
-            // 오늘 무제한 배지 (친구 초대 보상)
-            if referralManager.isUnlimitedToday {
-                HStack(spacing: 4) {
-                    Image(systemName: "infinity")
-                        .font(.system(size: 12))
-                    Text(L10n.referralUnlimitedActive)
-                        .font(.caption2)
-                        .fontWeight(.medium)
-                }
-                .foregroundColor(.purple)
-                .padding(.horizontal, 10)
-                .padding(.vertical, 5)
-                .background(Color.purple.opacity(0.15))
-                .cornerRadius(12)
-            }
-            // 웰컴 베네핏 배지 (웰컴 기간 중에만 표시)
-            else if !subscriptionManager.isPremium && subscriptionManager.isInWelcomePeriod {
-                HStack(spacing: 4) {
-                    Image(systemName: "gift.fill")
-                        .font(.system(size: 12))
-                    Text("\(L10n.welcomeGift): \(subscriptionManager.dailyLimit)\(L10n.times)")
-                        .font(.caption2)
+        VStack(spacing: 0) {
+            // 데모/Apple 로그인 배너
+            if authManager.isDemoMode {
+                HStack(spacing: 8) {
+                    Image(systemName: "info.circle.fill")
+                        .font(.system(size: 14))
+                    Text(L10n.demoBanner)
+                        .font(.caption)
                         .fontWeight(.medium)
                 }
                 .foregroundColor(.yellow)
-                .padding(.horizontal, 10)
-                .padding(.vertical, 5)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 8)
                 .background(Color.yellow.opacity(0.15))
-                .cornerRadius(12)
+            } else if authManager.isAppleSignIn {
+                HStack(spacing: 8) {
+                    Image(systemName: "apple.logo")
+                        .font(.system(size: 14))
+                    Text(L10n.appleSignInBanner)
+                        .font(.caption)
+                        .fontWeight(.medium)
+                }
+                .foregroundColor(.blue)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 8)
+                .background(Color.blue.opacity(0.15))
             }
 
-            // 로그아웃 버튼
-            Button(action: {
-                authManager.signOut()
-            }) {
-                Image(systemName: "rectangle.portrait.and.arrow.right")
-                    .font(.title3)
-                    .foregroundColor(.white.opacity(0.7))
+            HStack {
+                // 프로필 이미지
+                if authManager.isDemoMode || authManager.isAppleSignIn {
+                    // 데모/Apple 모드: 기본 아이콘
+                    ZStack {
+                        Circle()
+                            .fill(Color.blue.opacity(0.3))
+                        Image(systemName: authManager.isAppleSignIn ? "apple.logo" : "person.fill")
+                            .foregroundColor(.white.opacity(0.8))
+                            .font(.system(size: 20))
+                    }
+                    .frame(width: 40, height: 40)
+                } else if let imageURL = authManager.userProfileImageURL {
+                    // AsyncImage: URL에서 이미지를 비동기로 불러옴
+                    AsyncImage(url: imageURL) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    } placeholder: {
+                        // 이미지 로딩 중일 때 보여줄 뷰
+                        Circle()
+                            .fill(Color.gray.opacity(0.3))
+                    }
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())  // 원형으로 자르기
+                }
+
+                // 인사말
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(L10n.greeting)
+                        .font(.subheadline)
+                        .foregroundColor(.white.opacity(0.7))
+
+                    Text(authManager.userName)
+                        .font(.headline)
+                        .foregroundColor(.white)
+                }
+
+                Spacer()  // 나머지 공간 차지
+
+                // 오늘 무제한 배지 (친구 초대 보상)
+                if referralManager.isUnlimitedToday {
+                    HStack(spacing: 4) {
+                        Image(systemName: "infinity")
+                            .font(.system(size: 12))
+                        Text(L10n.referralUnlimitedActive)
+                            .font(.caption2)
+                            .fontWeight(.medium)
+                    }
+                    .foregroundColor(.purple)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                    .background(Color.purple.opacity(0.15))
+                    .cornerRadius(12)
+                }
+                // 웰컴 베네핏 배지 (웰컴 기간 중에만 표시)
+                else if !subscriptionManager.isPremium && subscriptionManager.isInWelcomePeriod {
+                    HStack(spacing: 4) {
+                        Image(systemName: "gift.fill")
+                            .font(.system(size: 12))
+                        Text("\(L10n.welcomeGift): \(subscriptionManager.dailyLimit)\(L10n.times)")
+                            .font(.caption2)
+                            .fontWeight(.medium)
+                    }
+                    .foregroundColor(.yellow)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 5)
+                    .background(Color.yellow.opacity(0.15))
+                    .cornerRadius(12)
+                }
+
+                // 로그아웃 버튼
+                Button(action: {
+                    authManager.signOut()
+                }) {
+                    Image(systemName: "rectangle.portrait.and.arrow.right")
+                        .font(.title3)
+                        .foregroundColor(.white.opacity(0.7))
+                }
             }
+            .padding()
         }
-        .padding()
     }
 
     // ============================================
@@ -774,6 +813,19 @@ struct MainVoiceView: View {
             }
             .padding(.horizontal)
             .padding(.top)
+
+            // 데모/Apple 모드: 시뮬레이션 안내
+            if authManager.isDemoMode || authManager.isAppleSignIn {
+                HStack(spacing: 6) {
+                    Image(systemName: "info.circle")
+                        .font(.system(size: 13))
+                    Text(L10n.demoCalendarSimulated)
+                        .font(.caption)
+                }
+                .foregroundColor(.yellow.opacity(0.9))
+                .padding(.horizontal)
+                .padding(.top, 8)
+            }
 
             // 등록된 일정 목록 (날짜별 그룹)
             ScrollView {

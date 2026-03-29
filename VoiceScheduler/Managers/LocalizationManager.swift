@@ -248,6 +248,15 @@ enum L10n {
     static var dailyTokenLimitReached: String { "daily_token_limit_reached".localized }
     static var budgetWarningMessage: String { "budget_warning_message".localized }
 
+    // Demo Mode (데모 모드)
+    static var demoMode: String { "demo_mode".localized }
+    static var tryDemoMode: String { "try_demo_mode".localized }
+    static var demoModeDescription: String { "demo_mode_description".localized }
+    static var demoBanner: String { "demo_banner".localized }
+    static var appleSignInBanner: String { "apple_sign_in_banner".localized }
+    static var demoCalendarSimulated: String { "demo_calendar_simulated".localized }
+    static var demoOr: String { "demo_or".localized }
+
     // Smart Scheduling (스마트 추천)
     static var smartRecommendations: String { "smart_recommendations".localized }
     static var smartSlotConfirmed: String { "smart_slot_confirmed".localized }

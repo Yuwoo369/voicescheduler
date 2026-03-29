@@ -181,3 +181,12 @@
 "store_period_year" = "/año";
 "store_period_week" = "/sem";
 "store_period_day" = "/día";
+
+// MARK: - Demo Mode (Modo Demo)
+"demo_mode" = "Modo Demo";
+"try_demo_mode" = "Probar Modo Demo";
+"demo_mode_description" = "Voz + análisis IA disponible. Registro en calendario simulado.";
+"demo_banner" = "Modo Demo — Inicia sesión con Google para todas las funciones";
+"apple_sign_in_banner" = "Apple Sign In — La sincronización del calendario requiere Google";
+"demo_calendar_simulated" = "Registro en calendario simulado (Modo Demo)";
+"demo_or" = "o";

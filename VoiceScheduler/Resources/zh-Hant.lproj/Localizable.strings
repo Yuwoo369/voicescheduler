@@ -181,3 +181,12 @@
 "store_period_year" = "年";
 "store_period_week" = "週";
 "store_period_day" = "天";
+
+// MARK: - Demo Mode (示範模式)
+"demo_mode" = "示範模式";
+"try_demo_mode" = "體驗示範模式";
+"demo_mode_description" = "語音 + AI分析可用。行事曆登錄為模擬。";
+"demo_banner" = "示範模式 — 登入Google使用完整功能";
+"apple_sign_in_banner" = "Apple登入 — 日曆同步需要Google登入";
+"demo_calendar_simulated" = "行事曆登錄模擬（示範模式）";
+"demo_or" = "或";
