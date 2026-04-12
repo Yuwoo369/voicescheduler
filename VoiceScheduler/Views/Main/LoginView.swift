@@ -110,8 +110,10 @@ struct LoginView: View {
                         .padding(.vertical, 16)           // 위아래 여백
                         .background(Color.white)          // 흰색 배경
                         .cornerRadius(12)                 // 둥근 모서리
+                        .contentShape(.rect)
                         .shadow(color: .black.opacity(0.2), radius: 10)  // 그림자
                     }
+                    .buttonStyle(.plain)
                     .disabled(authManager.isLoading)  // 로딩 중이면 버튼 비활성화
                     .opacity(authManager.isLoading ? 0.6 : 1)  // 비활성화 시 흐리게
 
@@ -166,7 +168,9 @@ struct LoginView: View {
                                 .stroke(Color.white.opacity(0.5), lineWidth: 1.5)
                         )
                         .cornerRadius(12)
+                        .contentShape(.rect)
                     }
+                    .buttonStyle(.plain)
 
                     // 데모 모드 안내 문구
                     Text(L10n.demoModeDescription)

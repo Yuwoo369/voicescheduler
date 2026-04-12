@@ -46,6 +46,29 @@ class GoogleCalendarService {
         print("📅 createEvent 호출됨 - 제목: \(title), 시간: \(hour)시 \(minute)분")
         #endif
 
+        // 데모 모드: mock 성공 반환
+        if accessToken == "demo_token" {
+            let calendar = Calendar.current
+            var startComponents = calendar.dateComponents([.year, .month, .day], from: date)
+            startComponents.hour = hour
+            startComponents.minute = minute
+            let startDate = calendar.date(from: startComponents) ?? date
+            let endDate = calendar.date(byAdding: .minute, value: duration, to: startDate) ?? startDate
+            let dateFormatter = ISO8601DateFormatter()
+            dateFormatter.formatOptions = [.withInternetDateTime]
+
+            let mockEvent = CalendarEvent(
+                id: UUID().uuidString,
+                summary: title,
+                start: EventDateTime(dateTime: dateFormatter.string(from: startDate), timeZone: TimeZone.current.identifier),
+                end: EventDateTime(dateTime: dateFormatter.string(from: endDate), timeZone: TimeZone.current.identifier)
+            )
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                completion(.success(mockEvent))
+            }
+            return
+        }
+
         // API URL: /calendars/primary/events
         // primary = 사용자의 기본 캘린더
         let urlString = "\(baseURL)/calendars/primary/events"
@@ -103,6 +126,7 @@ class GoogleCalendarService {
 
         // HTTP 요청 생성
         var request = URLRequest(url: url)
+        request.timeoutInterval = 30
         request.httpMethod = "POST"
         request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -184,7 +208,10 @@ class GoogleCalendarService {
         let dateFormatter = ISO8601DateFormatter()
 
         // URL 쿼리 파라미터 구성
-        var components = URLComponents(string: "\(baseURL)/calendars/primary/events")!
+        guard var components = URLComponents(string: "\(baseURL)/calendars/primary/events") else {
+            completion(.failure(CalendarError.invalidURL))
+            return
+        }
         components.queryItems = [
             URLQueryItem(name: "timeMin", value: dateFormatter.string(from: startOfDay)),
             URLQueryItem(name: "timeMax", value: dateFormatter.string(from: endOfDay)),
@@ -199,6 +226,7 @@ class GoogleCalendarService {
 
         // HTTP 요청 생성
         var request = URLRequest(url: url)
+        request.timeoutInterval = 30
         request.httpMethod = "GET"
         request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
 
@@ -260,6 +288,7 @@ class GoogleCalendarService {
         }
 
         var request = URLRequest(url: url)
+        request.timeoutInterval = 30
         request.httpMethod = "DELETE"
         request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
 

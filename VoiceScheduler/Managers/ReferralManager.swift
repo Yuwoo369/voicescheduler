@@ -12,6 +12,7 @@ import Security
 // MARK: - 초대 관리자
 // ============================================================
 
+@MainActor
 class ReferralManager: ObservableObject {
     static let shared = ReferralManager()
 

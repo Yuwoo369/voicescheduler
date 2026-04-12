@@ -231,6 +231,7 @@ struct TodoCardView: View {
                     Image(systemName: "pencil.circle.fill")
                         .font(.system(size: 20))
                         .foregroundColor(.white.opacity(0.5))
+                        .contentShape(.rect)
                 }
             } else {
                 // 미등록: 스마트 추천 + 편집 + 우선순위
@@ -255,6 +256,7 @@ struct TodoCardView: View {
                             .foregroundColor(.white)
                     }
                     .shadow(color: .cyan.opacity(showSmartRecommendations ? 0.5 : 0.2), radius: 6, x: 0, y: 2)
+                    .contentShape(.rect)
                 }
 
                 // 편집 버튼
@@ -262,6 +264,7 @@ struct TodoCardView: View {
                     Image(systemName: "pencil.circle.fill")
                         .font(.system(size: 22))
                         .foregroundColor(.white.opacity(0.5))
+                        .contentShape(.rect)
                 }
 
                 // 우선순위 버튼
@@ -279,6 +282,7 @@ struct TodoCardView: View {
                             Capsule()
                                 .strokeBorder(priorityColor.opacity(0.3), lineWidth: 1)
                         )
+                        .contentShape(.rect)
                 }
             }
         }
@@ -317,6 +321,7 @@ struct TodoCardView: View {
                     Image(systemName: "xmark.circle.fill")
                         .font(.system(size: 18))
                         .foregroundColor(.white.opacity(0.4))
+                        .contentShape(.rect)
                 }
             }
 
@@ -408,6 +413,7 @@ struct TodoCardView: View {
                 RoundedRectangle(cornerRadius: 10)
                     .strokeBorder(Color.white.opacity(0.1), lineWidth: 0.5)
             )
+            .contentShape(.rect)
         }
         .buttonStyle(.plain)
     }

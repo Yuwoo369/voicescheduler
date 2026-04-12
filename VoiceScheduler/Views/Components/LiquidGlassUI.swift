@@ -276,7 +276,9 @@ struct SmartTimeSlotCard: View {
                 }
             )
             .shadow(color: isSelected ? .green.opacity(0.3) : .black.opacity(0.2), radius: 10, x: 0, y: 5)
+            .contentShape(.rect)
         }
+        .buttonStyle(.plain)
         .scaleEffect(isSelected ? 1.02 : 1.0)
         .animation(.spring(response: 0.4, dampingFraction: 0.7), value: isSelected)
         .onAppear {

@@ -455,6 +455,7 @@ class GoogleAuthManager: ObservableObject {
         }
 
         var request = URLRequest(url: tokenURL)
+        request.timeoutInterval = 30
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
 
@@ -550,6 +551,7 @@ class GoogleAuthManager: ObservableObject {
         }
 
         var request = URLRequest(url: testURL)
+        request.timeoutInterval = 15
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 
         URLSession.shared.dataTask(with: request) { [weak self] data, response, error in

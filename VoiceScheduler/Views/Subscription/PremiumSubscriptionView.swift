@@ -144,7 +144,9 @@ struct PremiumSubscriptionView: View {
                             )
                         )
                         .cornerRadius(16)
+                        .contentShape(.rect)
                     }
+                    .buttonStyle(.plain)
                     .disabled(selectedProduct == nil || isPurchasing)
                     .padding(.horizontal)
 
@@ -345,7 +347,9 @@ struct SubscriptionOptionCard: View {
                             )
                     )
             )
+            .contentShape(.rect)
         }
+        .buttonStyle(.plain)
     }
 }
 

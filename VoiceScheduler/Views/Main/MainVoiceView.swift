@@ -174,7 +174,7 @@ struct MainVoiceView: View {
 
         static func random() -> (text: String, author: String) {
             let language = LocalizationManager.shared.currentLanguage
-            let languageQuotes = quotes[language] ?? quotes["en"]!
+            let languageQuotes = quotes[language] ?? quotes["en"] ?? []
             return languageQuotes.randomElement() ?? languageQuotes[0]
         }
     }
@@ -428,6 +428,7 @@ struct MainVoiceView: View {
                     Image(systemName: "rectangle.portrait.and.arrow.right")
                         .font(.title3)
                         .foregroundColor(.white.opacity(0.7))
+                        .contentShape(.rect)
                 }
             }
             .padding()
@@ -710,6 +711,7 @@ struct MainVoiceView: View {
                     .frame(width: 56, height: 56)
                     .background(Color.white.opacity(0.15))
                     .cornerRadius(16)
+                    .contentShape(.rect)
                 }
 
                 // 자동 캘린더 등록 버튼
@@ -733,7 +735,9 @@ struct MainVoiceView: View {
                         )
                     )
                     .cornerRadius(16)
+                    .contentShape(.rect)
                 }
+                .buttonStyle(.plain)
             }
             .padding(.horizontal)
             .padding(.bottom, 16)
@@ -765,6 +769,7 @@ struct MainVoiceView: View {
                             .font(.caption)
                     }
                     .foregroundColor(.white.opacity(0.6))
+                    .contentShape(.rect)
                 }
             }
             .padding(.horizontal)
@@ -809,6 +814,7 @@ struct MainVoiceView: View {
                             .font(.caption)
                     }
                     .foregroundColor(.white.opacity(0.6))
+                    .contentShape(.rect)
                 }
             }
             .padding(.horizontal)
@@ -882,7 +888,9 @@ struct MainVoiceView: View {
                     )
                 )
                 .cornerRadius(16)
+                .contentShape(.rect)
             }
+            .buttonStyle(.plain)
             .padding(.horizontal)
             .padding(.bottom, 16)
         }
@@ -1026,7 +1034,9 @@ struct MainVoiceView: View {
                         )
                     )
                     .cornerRadius(14)
+                    .contentShape(.rect)
                 }
+                .buttonStyle(.plain)
 
                 // 프리미엄 버튼
                 Button(action: {
@@ -1050,7 +1060,9 @@ struct MainVoiceView: View {
                         )
                     )
                     .cornerRadius(14)
+                    .contentShape(.rect)
                 }
+                .buttonStyle(.plain)
 
                 // 닫기 버튼
                 Button(action: {
@@ -1136,7 +1148,9 @@ struct MainVoiceView: View {
                         )
                     )
                     .cornerRadius(14)
+                    .contentShape(.rect)
                 }
+                .buttonStyle(.plain)
 
                 // 나중에 버튼
                 Button(action: {
@@ -1237,7 +1251,9 @@ struct MainVoiceView: View {
                             )
                         )
                         .cornerRadius(14)
+                        .contentShape(.rect)
                 }
+                .buttonStyle(.plain)
             }
             .padding(28)
             .background(
@@ -1338,7 +1354,9 @@ struct MainVoiceView: View {
                             )
                         )
                         .cornerRadius(12)
+                        .contentShape(.rect)
                 }
+                .buttonStyle(.plain)
 
                 // 닫기 버튼
                 Button(action: {

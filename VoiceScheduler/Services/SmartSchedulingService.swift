@@ -69,10 +69,10 @@ class SmartSchedulingService: ObservableObject {
     func recordCompletedTask(at hour: Int) {
         var patterns = userFocusPatterns
         patterns[hour] = (patterns[hour] ?? 50) + 5  // 성공 시 점수 증가
-        patterns[hour] = min(100, patterns[hour]!)
+        patterns[hour] = min(100, patterns[hour] ?? 50)
         userFocusPatterns = patterns
         #if DEBUG
-        print("📊 학습: \(hour)시 완료 기록 (점수: \(patterns[hour]!))")
+        print("📊 학습: \(hour)시 완료 기록 (점수: \(patterns[hour] ?? 50))")
         #endif
     }
 

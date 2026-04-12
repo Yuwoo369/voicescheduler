@@ -10,6 +10,7 @@ import Security
 // MARK: - 구독 관리자
 // ============================================================
 
+@MainActor
 class SubscriptionManager: ObservableObject {
     static let shared = SubscriptionManager()
 
