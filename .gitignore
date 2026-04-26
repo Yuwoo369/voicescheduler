@@ -78,3 +78,13 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# ================================
+# Old website mirror (use docs/ instead for GitHub Pages)
+# ================================
+AppStore/website/
+
+# ================================
+# Xcode project backup files
+# ================================
+*.pbxproj.new*
