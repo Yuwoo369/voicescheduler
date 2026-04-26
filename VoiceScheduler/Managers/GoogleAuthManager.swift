@@ -75,11 +75,11 @@ class GoogleAuthManager: ObservableObject {
     // Scope: 우리 앱이 접근하고 싶은 구글 서비스 목록
     // - userinfo.email: 사용자 이메일 읽기
     // - userinfo.profile: 사용자 이름, 프로필 사진 읽기
-    // - calendar: 구글 캘린더 읽기/쓰기
+    // - calendar.events: 캘린더 이벤트 생성/조회/삭제 (캘린더 자체 관리 권한 없음, 최소 권한)
     private let scopes = [
         "https://www.googleapis.com/auth/userinfo.email",
         "https://www.googleapis.com/auth/userinfo.profile",
-        "https://www.googleapis.com/auth/calendar"
+        "https://www.googleapis.com/auth/calendar.events"
     ]
 
     // --------------------------------------------------------
