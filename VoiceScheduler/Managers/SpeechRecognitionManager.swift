@@ -161,7 +161,7 @@ class SpeechRecognitionManager: NSObject, ObservableObject {
         // 오디오 세션 설정
         let audioSession = AVAudioSession.sharedInstance()
         do {
-            try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
+            try audioSession.setCategory(.playAndRecord, mode: .measurement, options: [.defaultToSpeaker, .duckOthers])
             try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
         } catch {
             errorMessage = "audio_session_error".localized
@@ -192,6 +192,19 @@ class SpeechRecognitionManager: NSObject, ObservableObject {
             if let result = result {
                 DispatchQueue.main.async {
                     self.transcribedText = result.bestTranscription.formattedString
+                }
+            }
+
+            // 에러 처리 (타임아웃, 네트워크 문제 등)
+            if let error = error {
+                DispatchQueue.main.async {
+                    #if DEBUG
+                    print("⚠️ 음성 인식 에러: \(error.localizedDescription)")
+                    #endif
+                    // final 결과가 없는 에러 → 사용자에게 알림
+                    if result == nil || result?.isFinal == true {
+                        self.errorMessage = error.localizedDescription
+                    }
                 }
             }
         }
@@ -247,8 +260,8 @@ class SpeechRecognitionManager: NSObject, ObservableObject {
         // 오디오 엔진 중지 + 탭 제거
         if audioEngine.isRunning {
             audioEngine.stop()
+            audioEngine.inputNode.removeTap(onBus: 0)
         }
-        audioEngine.inputNode.removeTap(onBus: 0)
 
         // 음성 인식 요청/작업 정리
         recognitionRequest?.endAudio()
